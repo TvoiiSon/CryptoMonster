@@ -1,0 +1,10 @@
+Полная инструкция по установке FISCO BCOS: (официальная документация по установке - https://fisco-bcos-documentation.readthedocs.io/zh_CN/v2.8.0/docs/installation.html)
+	1) sudo apt install -y openssl curl (версия openssl должна быть не меньше 1.1.1n)
+	2) cd ~ && mkdir -p fisco && cd fisco
+	3) curl -#LO https://github.com/FISCO-BCOS/FISCO-BCOS/releases/download/v2.8.0/build_chain.sh && chmod u+x build_chain.sh
+	4) bash build_chain.sh -l 127.0.0.1:4 -p 30300,20200,8545
+	5) bash nodes/127.0.0.1/start_all.sh
+	6) ps -ef | grep -v grep | grep fisco-bcos
+	7) tail -f nodes/127.0.0.1/node0/log/log*  | grep connected
+	8) tail -f nodes/127.0.0.1/node0/log/log*  | grep +++
+

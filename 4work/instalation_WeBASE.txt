@@ -1,0 +1,21 @@
+Полная установка WeBASE: (официальная документация по установке: https://webasedoc.readthedocs.io/zh_CN/latest/docs/WeBASE-Install/developer.html)
+	1) wget https://osp-1257653870.cos.ap-guangzhou.myqcloud.com/WeBASE/releases/download/v1.5.4/webase-front.zip
+	2) unzip webase-front.zip
+	3) cd webase-front
+	4) Из папки fisco(...../fisco/nodes/127.0.0.1/sdk) скопировать все содержимое в папке, в папку ...../webase-front/conf
+	5) bash start.sh
+	6) bash stop.sh
+	7) bash status.sh 
+	
+	Далее все действия осуществляются от лица ROOT: (sudo -sE)
+	8) ps -ef | grep node
+	9) ps -ef | grep webase.front 
+	10) netstat -anlp | grep 20200
+	11) netstat -anlp | grep 5002
+	12) cd webase-front (заходим в корень WeBase)
+	13) grep -B 3 "main run success" log/WeBASE-Front.log
+	
+	Чтобы зайти в панель управления WeBASE нужно запустить ноды командой bash start.sh, а затем пройти по ссылке http://localhost:5002/WeBASE-Front.
+	
+	ПРИЯТНОГО ПОЛЬЗОВАНИЯ!
+

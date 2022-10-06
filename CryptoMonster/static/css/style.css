@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+}
+.header__container {
+    height: 100px;
+}
+.header__row {
+    height: 100%;
+}
+.header__title {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5px;
+    text-align: center;
+}
+.header__balance {
+    text-align: end;
+}
+.header__balance>h5 {
+    padding: 10px 232px 0 0;
+}
+.header__balance__tokens {
+    margin: 0;
+    padding: 0;
+}
+.header__balance__tokens>li {
+    display: inline-block;
+    padding: 0 10px 0 40px;
+}
+.header__logout {
+    text-align: center;
+    padding-top: 15px;
+}
+.start_stop_phase {
+    margin-top: 50px;
+}
+.blocks {
+    margin-top: 50px;
+}
+.private__form {
+    margin-top: 50px;
+}
+.change {
+    width: 86px;
+}
+.form__buy__tokens {
+    text-align: center;
+}
+.form__title {
+    margin-left: 47px;
+}

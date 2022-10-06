@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body>
+
+    <div class="header">
+      <div class="container-fluid header__container">
+        <div class="row header__row">
+          <div class="col-md-2 header__title">
+            <h2>CryptoMonster</h2>
+          </div>
+          <div class="col-md-9 header__balance">
+            <h5>Balance:</h5>
+            <form action="" method="get">
+              <ul class="header__balance__tokens">
+                <li>ST: {{.seedBalance}}</li>
+                <li>PrivT: {{.privateBalance}}</li>
+                <li>PubT: {{.publicBalance}}</li>
+              </ul>
+            </form>
+          </div>
+          <div class="col-md-1 header__logout">
+            <form action="/logout" method="post">
+              <input type="submit" name="form_auth_logout" class="btn btn-danger" value="logout" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Start/Stop Private Phase</h2>
+          <form action="/phase" method="post">
+            <input type="submit" class="btn btn-success" name="action" value="start">
+            <input type="submit" class="btn btn-success" name="action" value="stop">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container private__form">
+      <div class="row">
+        <div class="col">
+          <h2>Purchase form for buy Private Tokens</h2>
+          <form class="form_auth_style" action="/application" method="post">
+            <label>Enter Your Name</label>
+            <input type="text" name="name" placeholder="Enter Your Name" required >
+            <label>Enter Your Contacts</label>
+            <input type="text" name="contacts" placeholder="Enter Your Contacts" required >
+            <input type="submit" class="btn btn-success" name="form_auth_submit"/>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container blocks">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Add User to BlackList</h2>
+          <form action="/addtoblacklist" method="post">
+            <input type="text" name="uname" placeholder="Enter User Login">
+            <input type="submit" class="btn btn-success" name="action" value="add">
+            <input type="submit" class="btn btn-success" name="action" value="remove">
+          </form>
+        </div>
+        <div class="col-md-4">
+          <h2 class="form__title">Buy Tokens</h2>
+          <form action="/buytokens" method="post" class="form__buy__tokens">
+            <input type="text" name="amount" placeholder="Enter Quantity To Buy Tokens">
+            <input type="submit" class="btn btn-success" value="buy">
+          </form>
+        </div>
+        <div class="col-md-4">
+          <h2>Application Operation</h2>
+          <form action="/application/operate" method="post">
+            <input type="text" name="uname" placeholder="Enter User Login">
+            <input type="submit" class="btn btn-success" name="action" value="accept">
+            <input type="submit" class="btn btn-success" name="action" value="deny">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container start_stop_phase">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Transfer Your Tokens</h2>
+          <form action="/transfer" method="post">
+            <input type="text" name="to" placeholder="Enter User Login">
+            <input type="text" name="amount" placeholder="Enter Quantity To Transfer Tokens">
+            <input type="submit" class="btn btn-success" value="transfer">
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h2>Change Price Tokens</h2>
+          <form action="/changeprice" method="post">
+            <input type="text" name="price" placeholder="Enter New Price Token">
+            <input type="text" class="btn btn-success change" value="change">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  </body>
+</html>

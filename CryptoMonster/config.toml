@@ -1,0 +1,19 @@
+[Network]
+#type rpc or channel
+Type="channel"
+CAFile="ca.crt"
+Cert="sdk.crt"
+Key="sdk.key"
+[[Network.Connection]]
+NodeURL="127.0.0.1:20200"
+GroupID=1
+# [[Network.Connection]]
+# NodeURL="127.0.0.1:20200"
+# GroupID=2
+
+[Account]
+KeyFile=".ci/0x50fb7d5eb37d3e3bc8bb1751e0a860cadd9d1919.pem"
+
+[Chain]
+ChainID=1
+SMCrypto=false
