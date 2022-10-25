@@ -3,6 +3,13 @@
 	2) unzip webase-front.zip
 	3) cd webase-front
 	4) Из папки fisco(...../fisco/nodes/127.0.0.1/sdk) скопировать все содержимое в папке, в папку ...../webase-front/conf
+	
+	Добавление JAVA_HOME
+	1) nano ~/.bashrc
+	2) export JAVA_HOME=/usr
+	   export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+	   export GOPATH=$HOME/go
+	
 	5) bash start.sh
 	6) bash stop.sh
 	7) bash status.sh 
