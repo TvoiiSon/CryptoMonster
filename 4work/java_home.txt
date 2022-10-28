@@ -10,3 +10,8 @@
 1) sudo update-alternatives --config java
 2) sudo nano /etc/environment
 	JAVA_HOME=”путь из команды 1”
+
+Команды в ~/.bashrc:
+1) export JAVA_HOME=/usr
+2) export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+3) export GOPATH=$HOME/go
